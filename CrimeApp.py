@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 # Load the pre-trained Gradient Boosting model
-best_sgd_model = joblib.load("best_sgd_model.joblib")
+best_sgd_model = joblib.load("best_gb_model.h5")
 
 # Define a function for prediction
 def predict_crime_category(features):
