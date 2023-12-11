@@ -2,7 +2,6 @@
 import streamlit as st
 import pandas as pd
 import joblib
-from sklearn.preprocessing import OneHotEncoder
 
 # Load the pre-trained Gradient Boosting model
 best_gb_model = joblib.load("best_gb_model.h5")
