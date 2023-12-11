@@ -2,9 +2,10 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from sklearn.preprocessing import OneHotEncoder
 
 # Load the pre-trained Gradient Boosting model
-best_sgd_model = joblib.load("best_gb_model.h5")
+best_gb_model = joblib.load("best_gb_model.h5")
 
 # Define a function for prediction
 def predict_crime_category(features):
@@ -18,7 +19,7 @@ def predict_crime_category(features):
     input_data_encoded = encoder.transform(input_data[['LOCATION_TYPE']])
 
     # Make predictions
-    prediction = best_sgd_model.predict(input_data_encoded)
+    prediction = best_gb_model.predict(input_data_encoded)
 
     return prediction[0]
 
