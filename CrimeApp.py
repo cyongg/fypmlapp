@@ -5,6 +5,7 @@ import joblib
 
 # Load the pre-trained Gradient Boosting model
 best_gb_model = joblib.load("best_gb_model.h5")
+encoder = joblib.load("encoder.h5")
 
 # Define a function for prediction
 def predict_crime_category(features):
